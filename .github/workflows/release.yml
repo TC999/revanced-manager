@@ -53,12 +53,6 @@ jobs:
       - name: Rename APK
         run: mv app/build/outputs/apk/release/*.apk Revanced-Manager.apk
 
-      - name: Upload the APK
-        uses: actions/upload-artifact@v4.3.5
-        with:
-          name: Revanced-Manager
-          path: Revanced-Manager.apk
-
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.REPOSITORY_PUSH_ACCESS }}
